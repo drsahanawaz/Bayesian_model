@@ -1,0 +1,12 @@
+# Large data files
+*.csv
+*.npy
+
+# Trained model files (100MB-300MB each -- exceeds GitHub limits)
+*.joblib
+
+# Jupyter/system clutter
+.ipynb_checkpoints/
+.DS_Store
+__pycache__/
+*.pyc
