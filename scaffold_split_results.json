@@ -1,0 +1,45 @@
+{
+  "scaffold_split": {
+    "n_train": 4963,
+    "n_test": 1915,
+    "n_scaffold_groups_total": 3643
+  },
+  "gp_scaffold": {
+    "rmse": 105.93,
+    "r2": 0.241,
+    "bias": -10.74,
+    "residual_std": 105.39,
+    "calibration_r": -0.03
+  },
+  "ridge_scaffold": {
+    "rmse": 111.3,
+    "r2": 0.162,
+    "alpha": 2000
+  },
+  "gp_matched_random_control": {
+    "n_train": 4963,
+    "rmse": 93.85,
+    "r2": 0.438
+  },
+  "gp_random_original": {
+    "n_train": 5502,
+    "rmse": 92.15,
+    "r2": 0.455
+  },
+  "tddft_scaffold_benchmark": {
+    "n": 28,
+    "gp_rmse": 84.92,
+    "gp_r2": 0.437,
+    "tddft_rmse": 121.36,
+    "tddft_r2": -0.151,
+    "tddft_bias": 60.39
+  },
+  "stda_scaffold_benchmark": {
+    "n": 1477,
+    "gp_rmse": 99.39,
+    "gp_r2": 0.217,
+    "stda_rmse": 125.96,
+    "stda_r2": -0.258,
+    "stda_bias": 65.28
+  }
+}
