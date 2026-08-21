@@ -43,7 +43,7 @@ Consistent with JCIM requirements on method/data sharing ([Merz et al., *J. Chem
 | Software environment | [`environment.yml`](environment.yml) / [`requirements.txt`](requirements.txt) with pinned versions |
 | Trained `.joblib` GP models | Not hosted (file size); regenerate with notebooks `04c` and `08` |
 
-**Archival DOI (recommended at acceptance).** Create a GitHub Release and archive it on [Zenodo](https://zenodo.org/) so the manuscript Data and Software Availability statement can cite a permanent DOI in addition to this GitHub URL.
+**Archival DOI.** Upon acceptance, a versioned GitHub Release will be archived on [Zenodo](https://zenodo.org/) to provide a permanent DOI in addition to this GitHub URL.
 
 ---
 

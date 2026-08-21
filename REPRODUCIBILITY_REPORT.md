@@ -4,8 +4,8 @@
 **Repository:** https://github.com/drsahanawaz/Bayesian_model  
 **Manuscript:** *Gaussian Processes λmax Prediction Exceeds TD-DFT Accuracy* (JCIM target)  
 **Report date:** 21 August 2026  
-**Operator environment:** local macOS; conda env `chemo_env`  
-**Overall verdict:** **PASS — all manuscript-critical numerical claims reproduced under `random_state = 42`.**
+**Environment:** local macOS; conda env `chemo_env`  
+**Result:** all manuscript-critical numerical claims reproduced under `random_state = 42`.
 
 ---
 
@@ -25,9 +25,9 @@ Notebooks were executed sequentially (phases 01→08) and key metrics were compa
 | Mechanistic extremes / artifacts | Pass |
 | Scaffold split + matched control + QC | Pass (exact) |
 
-**No manuscript numerical revisions are required** based on this check.
+Reported manuscript numbers match this check.
 
-Minor code patches were required for clean automated re-execution (see §6); they do not change reported science for the primary model.
+Minor code patches were applied for clean automated re-execution (see §6); they do not change reported science for the primary model.
 
 ---
 
@@ -171,8 +171,8 @@ Depends on in-memory objects from a live `04c` session (`fp_df`, `gp_full_local`
 ## 7. What was *not* claimed / caveats
 
 1. **Bit-for-bit identity across OS/BLAS builds** is not guaranteed; this check used one macOS ARM host with pinned conda packages.
-2. **Notebook 04c:** a late solvent-Ridge `NaN` edge case was patched; primary hybrid metrics were verified independently (see hybrid check above). A fresh full `nbconvert` is optional archival housekeeping only and does not change reported results.
-3. **Large `.joblib` files** remain gitignored; regeneration from notebooks (or author request) is required for third parties.
+2. **Notebook 04c:** a late solvent-Ridge `NaN` edge case was patched; primary hybrid metrics were verified independently (see hybrid check above). Reported hybrid metrics do not depend on completing a second full `nbconvert` pass of the patched notebook.
+3. **Large `.joblib` files** remain gitignored; third parties can regenerate them from the notebooks, or request them from the corresponding author.
 4. **Raw `paper_allDB.csv`** must be obtained from figshare; curated intermediates can be regenerated or shipped separately per Data and Software Availability statement.
 
 ---
@@ -196,8 +196,8 @@ Depends on in-memory objects from a live `04c` session (`fp_df`, `gp_full_local`
 
 Under the documented environment and **`random_state = 42`**, the analysis pipeline reproduces the manuscript’s central quantitative claims, including primary GP performance, leakage-free quantum-chemical comparisons, hybrid sTDA ablation, noise floor, residual extremity statistics, and Bemis–Murcko scaffold-split results.
 
-No changes to the reported manuscript metrics are indicated by this verification.
+Reported manuscript metrics are consistent with this verification.
 
 ---
 
-*Prepared as part of pre-submission reproducibility verification for JCIM (ACS Research Data Policy Level 2 / JCIM data & software availability expectations).*
+*Reproducibility verification aligned with ACS Research Data Policy Level 2 / JCIM data and software availability expectations.*
