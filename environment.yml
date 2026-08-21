@@ -1,0 +1,20 @@
+# Conda environment used for the reported analyses (JCIM reproducibility).
+# Create with: conda env create -f environment.yml
+# Activate with: conda activate chemo_env
+name: chemo_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.20
+  - rdkit=2025.09.5
+  - scikit-learn=1.7.2
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - scipy=1.15.2
+  - matplotlib=3.10.9
+  - seaborn=0.13.2
+  - joblib=1.5.3
+  - jupyter
+  - nbconvert
+  - nbformat=5.10.4
+  - nbclient=0.11.0

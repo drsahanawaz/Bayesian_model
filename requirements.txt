@@ -1,0 +1,13 @@
+# Pip-compatible pin set matching environment.yml where available.
+# Prefer: conda env create -f environment.yml
+# RDKit is best installed via conda-forge (not reliably on PyPI for all platforms).
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.15.2
+matplotlib==3.10.9
+seaborn==0.13.2
+joblib==1.5.3
+nbformat==5.10.4
+nbclient==0.11.0
+# rdkit: install with conda install -c conda-forge rdkit=2025.09.5

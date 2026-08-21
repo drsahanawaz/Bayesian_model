@@ -1,12 +1,20 @@
-# Large data files
-*.csv
+# Raw third-party source CSV (download from Beard figshare; do not redistribute here)
+paper_allDB.csv
+
+# Large array dumps
 *.npy
 
-# Trained model files (100MB-300MB each -- exceeds GitHub limits)
+# Trained model files (100MB–300MB each — exceeds GitHub limits; regenerate via notebooks)
 *.joblib
+
+# Local verification crumbs (see REPRODUCIBILITY_REPORT.md)
+_*.json
 
 # Jupyter/system clutter
 .ipynb_checkpoints/
+.ipython/
+.jupyter/
+.mplconfig/
 .DS_Store
 __pycache__/
 *.pyc
