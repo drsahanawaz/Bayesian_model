@@ -196,7 +196,7 @@ Depends on in-memory objects from a live `04c` session (`fp_df`, `gp_full_local`
 
 Under the documented environment and **`random_state = 42`**, the analysis pipeline reproduces the manuscript’s central quantitative claims, including primary GP performance, leakage-free quantum-chemical comparisons, hybrid sTDA ablation, noise floor, residual extremity statistics, and Bemis–Murcko scaffold-split results.
 
-**Recommendation for submission:** Keep the current manuscript numbers; include this report (or a shortened SI pointer) with the GitHub release; optionally complete one clean full `04c` `nbconvert` after the NaN patch for an unbroken execution log.
+No changes to the reported manuscript metrics are indicated by this verification.
 
 ---
 
