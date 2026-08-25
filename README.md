@@ -2,7 +2,7 @@
 
 Analysis code accompanying the manuscript:
 
-> **Gaussian Processes λ<sub>max</sub> Prediction Exceeds TD-DFT Accuracy**  
+> **Gaussian Process λ<sub>max</sub> Prediction Outperforms TD-DFT Benchmarks**  
 > Md Sahanawaz — Sheikhpara ARM Polytechnic  
 > Intended venue: *Journal of Chemical Information and Modeling* (ACS)
 

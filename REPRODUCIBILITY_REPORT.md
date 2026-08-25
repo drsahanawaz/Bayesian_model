@@ -2,7 +2,7 @@
 
 **Project:** Gaussian Process prediction of experimental UV-Vis λ<sub>max</sub> (Beard et al. 2019 corpus)  
 **Repository:** https://github.com/drsahanawaz/Bayesian_model  
-**Manuscript:** *Gaussian Processes λmax Prediction Exceeds TD-DFT Accuracy* (JCIM target)  
+**Manuscript:** *Gaussian Process λmax Prediction Outperforms TD-DFT Benchmarks* (JCIM target)  
 **Report date:** 21 August 2026  
 **Environment:** local macOS; conda env `chemo_env`  
 **Result:** all manuscript-critical numerical claims reproduced under `random_state = 42`.
