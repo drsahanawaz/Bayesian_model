@@ -1,6 +1,10 @@
 # Raw third-party source CSV (download from Beard figshare; do not redistribute here)
 paper_allDB.csv
 
+# Third-party photoswitch compilation (Griffiths et al., Chem. Sci. 2022).
+# Obtain from the original publication; not redistributed here pending licence review.
+photoswitches.csv
+
 # Large array dumps
 *.npy
 
@@ -22,3 +26,8 @@ __pycache__/
 # Manuscript and methods write-up kept private, not pushed to GitHub
 Phase1-7_Complete_Workflow_Summary_and_Methods_Draft.md
 Manuscript_Draft_GP_lambda_max_vs_TDDFT_v2_scaffold.md
+
+# Local literature-survey helpers (not part of the analysis pipeline)
+_fetch_abstracts.py
+_literature_survey.py
+literature_survey_results.json

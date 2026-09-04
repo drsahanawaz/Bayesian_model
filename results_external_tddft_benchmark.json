@@ -1,0 +1,206 @@
+{
+  "reference": {
+    "source": "Greenman, Green, Gomez-Bombarelli, Chem. Sci. 2022, 13, 1152",
+    "licence": "MIT",
+    "level_of_theory": "wB97X-D3/def2-SVPD vertical excitations, vacuum",
+    "geometry_pipeline": "RDKit embed -> GFN2-xTB -> BP86-D3/def2-SVP",
+    "molecules_published": 28803,
+    "non_physical_removed": 45,
+    "unique_structures": 27507,
+    "calculations_performed_in_this_work": 0
+  },
+  "matching": {
+    "holdout_size": 5811,
+    "matched": 5501,
+    "match_fraction": 0.9466528996730339,
+    "from_collapsed_isotopologue_keys": 78,
+    "training_disjoint": true,
+    "reference_overlap_with_training_fraction": 0.08765041625767986
+  },
+  "audit": {
+    "coverage": {
+      "matched": {
+        "n": 5501,
+        "lambda_mean": 425.39428275447375,
+        "lambda_sd": 106.38631517198066,
+        "mw_mean": 468.93631321577914,
+        "conjugation_mean": 26.26486093437557,
+        "gp_rmse": 94.96775905695814
+      },
+      "unmatched": {
+        "n": 310,
+        "lambda_mean": 431.96673465979813,
+        "lambda_sd": 109.33106387918811,
+        "mw_mean": 529.4850935483871,
+        "conjugation_mean": 29.31290322580645,
+        "gp_rmse": 90.76451210027851
+      }
+    },
+    "matching_sensitivity": [
+      {
+        "subset": "all matched",
+        "method": "TD-DFT S1",
+        "n": 5501,
+        "rmse": 84.12636974022725,
+        "bias": -61.86004621127178,
+        "scatter": 57.01386470332231,
+        "r2": 0.3746937589651227
+      },
+      {
+        "subset": "all matched",
+        "method": "GP",
+        "n": 5501,
+        "rmse": 94.96775905695814,
+        "bias": -8.538457114318426,
+        "scatter": 94.58313808712101,
+        "r2": 0.2031421658771536
+      },
+      {
+        "subset": "collapsed keys excluded",
+        "method": "TD-DFT S1",
+        "n": 5423,
+        "rmse": 83.88834991032208,
+        "bias": -61.81086192801893,
+        "scatter": 56.715717384090404,
+        "r2": 0.37876715082480195
+      },
+      {
+        "subset": "collapsed keys excluded",
+        "method": "GP",
+        "n": 5423,
+        "rmse": 95.1286030119541,
+        "bias": -8.710107487017494,
+        "scatter": 94.72900896014148,
+        "r2": 0.20113508791352208
+      }
+    ],
+    "solvent": [
+      {
+        "subset": "single solvent record",
+        "n": 3432,
+        "rmse": 83.39215311216002,
+        "bias": -58.58011962389079,
+        "scatter": 59.3516704527563
+      },
+      {
+        "subset": "multiple solvent records",
+        "n": 2069,
+        "rmse": 85.33033810166664,
+        "bias": -67.3006977568936,
+        "scatter": 52.458390005603476
+      }
+    ],
+    "state_truncation": {
+      "experiment_redder_than_S1": 0.9452826758771132,
+      "experiment_bluer_than_S5": 0.00036357025995273584,
+      "experiment_inside_window": 0.054353753862934014
+    },
+    "applicability_domain": [
+      {
+        "subset": "scaffold seen in training",
+        "method": "TD-DFT S1",
+        "n": 917,
+        "rmse": 67.53703848333659,
+        "bias": -52.28861034183808,
+        "scatter": 42.74520786730498,
+        "r2": 0.4079466421322354,
+        "pearson_r": 0.8914844755912977
+      },
+      {
+        "subset": "scaffold seen in training",
+        "method": "GP",
+        "n": 917,
+        "rmse": 71.83825134476857,
+        "bias": 27.21269347808558,
+        "scatter": 66.48461227939816,
+        "r2": 0.33013339436604117,
+        "pearson_r": 0.6528950674695189
+      },
+      {
+        "subset": "scaffold unseen",
+        "method": "TD-DFT S1",
+        "n": 4584,
+        "rmse": 87.06638135507943,
+        "bias": -63.774750987072544,
+        "scatter": 59.273399588727926,
+        "r2": 0.35202545958273745,
+        "pearson_r": 0.8408573761028718
+      },
+      {
+        "subset": "scaffold unseen",
+        "method": "GP",
+        "n": 4584,
+        "rmse": 98.94782348218021,
+        "bias": -15.690247056123505,
+        "scatter": 97.69589509891652,
+        "r2": 0.1631079464889289,
+        "pearson_r": 0.4311134709319981
+      }
+    ]
+  },
+  "scoreboard": {
+    "TD-DFT: lowest excitation (S1)": {
+      "n": 5501,
+      "rmse": 84.12636974022725,
+      "bias": -61.86004621127178,
+      "scatter": 57.01386470332231,
+      "mae": 66.55486664505617,
+      "r2": 0.3746937589651227,
+      "pearson_r": 0.8501710726858144,
+      "cv_affine_rmse": 58.21524895919405
+    },
+    "TD-DFT: lowest bright (f>=0.01)": {
+      "n": 5501,
+      "rmse": 86.02559247469891,
+      "bias": -65.32453202396533,
+      "scatter": 55.974173298700016,
+      "mae": 69.03575940199197,
+      "r2": 0.34614144381693857,
+      "pearson_r": 0.8569093397034742,
+      "cv_affine_rmse": 56.48432057192611
+    },
+    "TD-DFT: brightest in 1-4 eV": {
+      "n": 5501,
+      "rmse": 92.82874012578405,
+      "bias": -71.06341118932332,
+      "scatter": 59.72576147256314,
+      "mae": 72.69226647725479,
+      "r2": 0.23863417518627617,
+      "pearson_r": 0.8589123427719797,
+      "cv_affine_rmse": 54.49897534137207
+    },
+    "TD-DFT: brightest overall": {
+      "n": 5501,
+      "rmse": 110.23256852788664,
+      "bias": -87.36086251073361,
+      "scatter": 67.22573068130924,
+      "mae": 88.51910771072515,
+      "r2": -0.07361438158507894,
+      "pearson_r": 0.775130486894373,
+      "cv_affine_rmse": 68.22126578071074
+    },
+    "GP (this work)": {
+      "n": 5501,
+      "rmse": 94.96775905695814,
+      "bias": -8.538457114318426,
+      "scatter": 94.58313808712101,
+      "mae": 69.567397437753,
+      "r2": 0.2031421658771536,
+      "pearson_r": 0.45894012569603343,
+      "cv_affine_rmse": 94.55744793819476
+    }
+  },
+  "null_rmse": 106.38631517198066,
+  "paired_bootstrap_tddft_vs_gp": {
+    "rmse_advantage_mean": 10.96588099403157,
+    "rmse_advantage_ci": [
+      4.252571265371053,
+      15.527112149801997
+    ],
+    "pearson_advantage_mean": 0.39465056639901036,
+    "pearson_advantage_ci": [
+      0.31935927498925026,
+      0.44997048049290733
+    ]
+  }
+}
