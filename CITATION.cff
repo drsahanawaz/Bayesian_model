@@ -21,7 +21,7 @@ keywords:
 authors:
   - family-names: Sahanawaz
     given-names: Md
-    orcid: ""
+    orcid: "https://orcid.org/0009-0000-6615-5441"
     affiliation: "Department of Science & Humanities, Sheikhpara ARM Polytechnic, West Bengal, India"
 license: MIT
 repository-code: "https://github.com/drsahanawaz/Bayesian_model"
