@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the accompanying preprint."
+title: "Bayesian model: Gaussian Process prediction of UV-Vis lambda_max with benchmark vs TD-DFT"
+abstract: >-
+  Jupyter-notebook workflow and data for the manuscript "Benchmark Label
+  Definition, Not Model Capability, Explains a Machine-Learning Advantage over
+  TD-DFT for λmax Prediction". Curates the Beard et al. (2019) literature-mined
+  UV-Vis dataset, trains a Gaussian Process on 256-bit Morgan fingerprints plus
+  largest conjugated-system size, and evaluates it against TD-DFT / sTDA under
+  leakage-free and Bemis-Murcko scaffold-split protocols, plus two independent
+  external corpora and published quantum-chemical benchmarks.
+keywords:
+  - UV-Vis absorption
+  - lambda_max
+  - Gaussian process
+  - machine learning
+  - TD-DFT
+  - benchmark
+  - chemical space
+  - reproducibility
+authors:
+  - family-names: Sahanawaz
+    given-names: Md
+    orcid: ""
+    affiliation: "Department of Science & Humanities, Sheikhpara ARM Polytechnic, West Bengal, India"
+license: MIT
+repository-code: "https://github.com/drsahanawaz/Bayesian_model"
+date-released: "2026-09-14"
+preferred-citation:
+  type: preprint
+  title: "Benchmark Label Definition, Not Model Capability, Explains a Machine-Learning Advantage over TD-DFT for λmax Prediction"
+  authors:
+    - family-names: Sahanawaz
+      given-names: Md
+  affiliation: "Department of Science & Humanities, Sheikhpara ARM Polytechnic, West Bengal, India"

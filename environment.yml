@@ -1,4 +1,4 @@
-# Conda environment used for the reported analyses (JCIM reproducibility).
+# Conda environment used for the reported manuscript analyses.
 # Create with: conda env create -f environment.yml
 # Activate with: conda activate chemo_env
 name: chemo_env

@@ -2,7 +2,7 @@
 
 Analysis code accompanying the manuscript:
 
-> **Benchmark Label Definition and Same-Corpus Evaluation Explain Reported Machine-Learning Advantages over TD-DFT in λ<sub>max</sub> Prediction**  
+> **Benchmark Label Definition, Not Model Capability, Explains a Machine-Learning Advantage over TD-DFT for λ<sub>max</sub> Prediction**  
 > Md Sahanawaz — Sheikhpara ARM Polytechnic
 
 This repository provides Jupyter notebooks that curate the Beard et al. (2019) literature-mined UV-Vis dataset, train a Gaussian Process (GP) on 256-bit Morgan fingerprints plus largest conjugated-system size, and benchmark against TD-DFT / sTDA under leakage-free and Bemis–Murcko scaffold-split evaluation.

@@ -2,7 +2,7 @@
 
 **Project:** Gaussian Process prediction of experimental UV-Vis λ<sub>max</sub> (Beard et al. 2019 corpus)  
 **Repository:** https://github.com/drsahanawaz/Bayesian_model  
-**Manuscript:** *Benchmark Label Definition and Same-Corpus Evaluation Explain Reported Machine-Learning Advantages over TD-DFT in λmax Prediction*  
+**Manuscript:** *Benchmark Label Definition and Same-Corpus Evaluation Explain Reported Machine-Learning Advantages over TD-DFT for λmax Prediction*  
 **Report date:** 21 August 2026; notebooks 09–11 checked 28 August 2026; notebooks 12–13 checked 31 August 2026  
 **Environment:** local macOS; conda env `chemo_env`  
 **Result:** all manuscript-critical numerical claims reproduced under `random_state = 42`.
@@ -33,7 +33,7 @@ Notebooks were executed sequentially (01→13) and key metrics were compared to 
 
 Reported manuscript numbers match this check.
 
-**Uncertainty wording.** An earlier draft claimed GP predictive uncertainty was "uninformative in all three evaluation regimes (|r| ≤ 0.06)". On the fourth regime (notebook 12) the raw correlation is r = +0.373, but that tracks the evaluation set's label spread rather than chemical familiarity; the manuscript states the scoped claim (see §7).
+**Uncertainty.** Within the training corpus and on the photoswitch holdout, |r(σ, |error|)| is ≤ 0.06. On the second external corpus (notebook 12) the raw correlation is r = +0.373, but that tracks the evaluation set's label spread rather than chemical familiarity; the manuscript states the scoped claim (see §7).
 
 Minor code patches were applied for clean automated re-execution (see §6); they do not change reported science for the primary model.
 
@@ -222,7 +222,7 @@ Depends on in-memory objects from a live `04c` session (`fp_df`, `gp_full_local`
 5. **Photoswitch data are not redistributed** pending licence review, so notebooks 09–11 need `photoswitches.csv` supplied by the user. Notebook 12 is exempt: its source CSV is CC BY 4.0 and ships with the repository.
 6. **Label quality and label convention are not separated** by the second external corpus. Joung labels are manually curated to a stated convention (first absorption maximum) while Beard labels are automatically extracted, so the tier-3 result confounds cleaner labels with compatible labels; both would act in the same direction. What the comparison does establish is that a chemically unfamiliar corpus with a compatible convention is predicted acceptably while a chemically narrow corpus with an incompatible one is not.
 7. **Tier-3 transfer is comparative, not absolute.** On the second corpus the model improves on the null baseline by only 11% in RMSE (94.75 vs 106.56 nm), Pearson r is 0.466, and predictions are visibly regressed to the mean. The supported claim is that this corpus is no harder than the model's own novel scaffolds, not that the model predicts it well.
-8. **Predictive uncertainty is weak, not absent.** At matched label distribution the correlation between predicted σ and absolute error is +0.155 with a 95% range of +0.035 to +0.285, so the lower bound excludes zero. The operational conclusion — too weak to triage predictions — still holds; "uninformative" would overstate the result.
+8. **Predictive uncertainty is weak, not absent.** At matched label distribution the correlation between predicted σ and absolute error is +0.155 with a 95% range of +0.035 to +0.285, so the lower bound excludes zero. The operational conclusion — too weak to triage predictions — still holds.
 9. **The GP's advantage over quantum chemistry is not claimed outside the training corpus.** It holds on the leakage-free in-corpus holdouts (87.3 vs 108.7 nm against TD-DFT, n = 36; 81.6 vs 117.1 nm against sTDA, n = 1,011) and on neither external corpus. Phase 13 records the inversion and the audit supporting it. Any statement that the model is competitive with excited-state calculation off its own corpus is unsupported by this repository.
 10. **The external quantum-chemical reference is a single level of theory.** ωB97X-D3/def2-SVPD vertical excitations in vacuum, taken as published. Its absolute offset is not a measure of what careful excited-state work could achieve on these molecules. The direction of that limitation favours the GP, so it does not threaten the comparison, but the offset should not be quoted as a functional benchmark.
 11. **The transition-selection sweep in phase 13 is a weaker demonstration than it appears.** Because 94.5% of experimental maxima lie redder than the computed S₁, S₁ is the reddest available state and every other convention is arithmetically forced to be worse. The sweep is reported with that caveat stated; the phase-10 photoswitch comparison, where the calculations were nearly unbiased, is the cleaner test of label convention.

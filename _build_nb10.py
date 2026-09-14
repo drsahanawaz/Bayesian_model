@@ -38,12 +38,11 @@ BHLYP/6-31G\*. That makes it possible to benchmark the GP against quantum chemis
 **genuinely external** set, rather than on the 36-compound Beard subset used in the
 manuscript.
 
-**Why this matters.** The manuscript's central claim is that the GP outperforms TD-DFT.
-That claim rests on a benchmark whose experimental labels are heterogeneous text-mined
-$\lambda_{\max}$ values of unspecified transition character. Here the labels are a single,
-well-defined transition and the DFT values were computed *for that transition*. If the
-ranking reverses, the manuscript's advantage is an artifact of label definition rather
-than a capability difference.
+**Why this matters.** On leakage-free holdouts from the training corpus the GP beats
+TD-DFT, but that comparison uses heterogeneous text-mined $\lambda_{\max}$ labels of
+unspecified transition character. Here the labels are a single, well-defined transition
+and the DFT values were computed *for that transition*. If the ranking reverses, the
+in-corpus advantage is an artifact of label definition rather than a capability difference.
 
 **Fairness caveat, stated up front.** On this holdout TD-DFT is scored on precisely the
 transition it computed, while the GP was trained on mixed literature $\lambda_{\max}$ and
@@ -618,8 +617,8 @@ conclusions this notebook supports are:
 
 1. On the external photoswitch holdout, the two interpretable levels of theory are
    substantially more accurate than the published GP, and the gap persists after the GP's
-   systematic offset is removed for free. The manuscript's "GP outperforms TD-DFT" claim
-   does not survive external validation.
+   systematic offset is removed for free. The in-corpus GP-versus-TD-DFT advantage does
+   not survive this external validation.
 2. The reversal is explained by label definition, not by model capability. The Beard
    benchmark labels are heterogeneous text-mined $\lambda_{\max}$ values of unspecified
    transition character, which penalises a method that computes one specific transition.
